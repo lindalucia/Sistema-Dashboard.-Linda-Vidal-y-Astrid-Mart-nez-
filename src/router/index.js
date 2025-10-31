@@ -3,6 +3,8 @@ import Home from '@/pages/index.vue'
 import Dashboard from '@/pages/dashboard/dashboard.vue'
 import Registro from '@/pages/dashboard/registro.vue'
 import Matricula from '@/pages/dashboard/matricula.vue'
+import Estadisticas from '@/pages/dashboard/estadisticas.vue'
+import Asignaturas from '@/pages/dashboard/asignaturas.vue' // ✅ Nuevo componente importado
 
 const routes = [
   {
@@ -15,18 +17,35 @@ const routes = [
     path: '/dashboard',
     name: 'dashboard',
     component: Dashboard,
-     children: [
-      { path: 'registro', 
+
+     redirect: { name: 'registro' },
+
+    children: [
+      { 
+        path: 'registro', 
+        name: 'registro',
         component: Registro 
       },
-      { path: 'matricula', 
+      { 
+        path: 'matricula', 
+        name: 'matricula',
         component: Matricula
-      },         // /productos
-     
+      }, 
+      // 🎯 Ruta de Estadísticas (pendiente de la corrección anterior)
+      { 
+        path: 'estadisticas', 
+        name: 'estadisticas',
+        component: Estadisticas
+      },
+      // 📚 Nueva Ruta de Asignaturas
+      { 
+        path: 'asignaturas', 
+        name: 'asignaturas',// Esto creará la URL: /dashboard/asignaturas
+        component: Asignaturas
+      }, 
     ]
-   
   },
- 
+  
 ]
 
 const router = createRouter({

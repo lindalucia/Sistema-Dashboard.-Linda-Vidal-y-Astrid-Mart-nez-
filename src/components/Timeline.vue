@@ -1,13 +1,14 @@
 <template>
   <v-container class="py-10">
-    <v-timeline align="start">
+    <!-- 🔹 Timeline centrado con color del tema -->
+    <v-timeline align="center" line-color="primary">
 
       <!-- 🔹 1. Fundación -->
-      <v-timeline-item dot-color="#621717" fill-dot>
+      <v-timeline-item dot-color="primary" fill-dot>
         <v-card class="timeline-card light-card">
           <v-card-title class="bg-custom text-white d-flex align-center">
             <v-icon class="me-3" icon="mdi-school" size="x-large"></v-icon>
-            <h2 class="title-text">¡Fundación del Colegio (2001)!</h2>
+            <h2 class="title-text">¡Fundación del Colegio! (2001)</h2>
           </v-card-title>
           <v-card-text class="body-text">
             El colegio abre sus puertas con apenas 80 estudiantes y un pequeño grupo de docentes apasionados por ofrecer educación de calidad.
@@ -21,7 +22,7 @@
       </v-timeline-item>
 
       <!-- 🔹 2. Crecimiento -->
-      <v-timeline-item dot-color="#621717" fill-dot>
+      <v-timeline-item dot-color="primary" fill-dot>
         <v-card class="timeline-card dark-card">
           <v-card-title class="bg-white text-custom d-flex justify-end align-center">
             <h2 class="title-text">¡Crecimos rápido! (2005–2010)</h2>
@@ -39,7 +40,7 @@
       </v-timeline-item>
 
       <!-- 🔹 3. Innovación -->
-      <v-timeline-item dot-color="#621717" fill-dot>
+      <v-timeline-item dot-color="primary" fill-dot>
         <v-card class="timeline-card light-card">
           <v-card-title class="bg-custom text-white d-flex align-center">
             <v-icon class="me-3" icon="mdi-laptop" size="x-large"></v-icon>
@@ -57,7 +58,7 @@
       </v-timeline-item>
 
       <!-- 🔹 4. Transformación -->
-      <v-timeline-item dot-color="#621717" fill-dot>
+      <v-timeline-item dot-color="primary" fill-dot>
         <v-card class="timeline-card dark-card">
           <v-card-title class="bg-white text-custom d-flex justify-end align-center">
             <h2 class="title-text">Transformación tecnológica (2016–2020)</h2>
@@ -74,7 +75,7 @@
       </v-timeline-item>
 
       <!-- 🔹 5. Educación del futuro -->
-      <v-timeline-item dot-color="#621717" fill-dot>
+      <v-timeline-item dot-color="primary" fill-dot>
         <v-card class="timeline-card light-card">
           <v-card-title class="bg-custom text-white d-flex align-center">
             <v-icon class="me-3" icon="mdi-rocket-launch" size="x-large"></v-icon>
@@ -98,27 +99,26 @@
 <script setup>
 </script>
 
-<style scoped>
+<style>
 /* 🎨 Color personalizado */
 .bg-custom {
   background-color: #621717 !important;
 }
 
-/* Texto color vino tinto */
 .text-custom {
   color: #621717 !important;
 }
 
-/* 💫 Estilo general de las cards */
+/* 💫 Cards */
 .timeline-card {
   border-radius: 18px;
   overflow: hidden;
   margin-bottom: 28px;
   transition: all 0.3s ease-in-out;
   box-shadow: 0 4px 12px rgba(98, 23, 23, 0.15);
-  max-width: 700px; /* 👈 límite de ancho */
+  max-width: 700px;
   margin-left: auto;
-  margin-right: auto; /* 👈 centrado horizontal */
+  margin-right: auto;
 }
 
 .timeline-card:hover {
@@ -126,7 +126,6 @@
   box-shadow: 0 10px 25px rgba(98, 23, 23, 0.3);
 }
 
-/* 💡 Alternancia de estilos */
 .light-card {
   background-color: #fff;
   color: #333;
@@ -142,7 +141,7 @@
   border-top: 2px solid rgba(0, 0, 0, 0.1);
 }
 
-/* 📝 Texto más grande y moderno */
+/* 📝 Texto */
 .title-text {
   font-size: 1.8rem;
   font-weight: 600;
@@ -157,19 +156,30 @@
   color: inherit;
 }
 
-/* 🧩 Ajustes del contenedor principal */
+/* 🧩 Contenedor */
 .v-container {
-  max-width: 900px; /* 👈 hace que no se estire tanto */
-  margin: 0 auto; /* 👈 centra todo el timeline */
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-/* 🕑 Alineación del timeline */
+/* 🔹 Línea visible del timeline */
+.v-timeline-divider__line {
+  background-color: #621717 !important;
+  opacity: 1 !important;
+  width: 3px !important;
+}
+
 .v-timeline {
+  margin: 0 auto;
   justify-content: center;
+  position: relative;
 }
 
-.v-timeline-item {
-  margin-left: auto;
-  margin-right: auto;
+.v-timeline::before {
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  background-color: #621717 !important;
+  opacity: 1 !important;
 }
+
 </style>

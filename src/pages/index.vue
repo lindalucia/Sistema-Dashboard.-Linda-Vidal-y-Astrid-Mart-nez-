@@ -19,8 +19,8 @@ import Timeline from '@/components/Timeline.vue' // 👈 IMPORTANTE
 
 <style>
 body {
-  background-color: #000000;
-}
-</style>
+  background-color: #fffee8;   
+}                              
+</style> <!-- fondo d dnd esta la timelin-->
 
 

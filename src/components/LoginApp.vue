@@ -2,17 +2,17 @@
   <v-row class="d-flex justify-center align-stretch fill-height ma-0 pa-0">
     <!-- Columna Izquierda -->
     <v-col cols="5" class="fondoimagen d-flex flex-column justify-center align-center pa-6">
-      <v-card class="card-uniform pa-4 mb-4 text-center rounded-lg" elevation="6">
-        <div class="text-h6 font-weight-bold text-white-darken-3">“Innovar para educar, educar para transformar.”</div>
+      <v-card class="card-uniform pa-4 mb-4 text-center rounded-lg bg-crema" elevation="6">
+        <div class="text-h6 font-weight-bold text-black">Innovar para educar, educar para transformar.</div>
       </v-card>
 
-      <v-card class="card-uniform pa-4 mb-4 text-center rounded-lg" elevation="6">
-        <div class="text-subtitle-1 font-weight-bold text-white-darken-3">
+      <v-card class="card-uniform pa-4 mb-4 text-center rounded-lg bg-crema" elevation="6">
+        <div class="text-subtitle-1 font-weight-bold text-black">
           Institución Educativa Nuevo Horizonte
         </div>
       </v-card>
 
-      <v-card class="card-uniform pa-4 d-flex justify-center align-center rounded-lg" elevation="6">
+      <v-card class="card-uniform pa-4 mb-4 text-center rounded-lg bg-crema" elevation="6">
         <v-img
           max-width="150"
           height="120"
@@ -90,11 +90,16 @@ const login = () => router.push('dashboard')
 }
 
 .fondo {
-  background-color: #000;
+  background-color: #fffee8;
 }
 
 /* Asegura que las cards no se salgan del alto visible */
 .card-uniform {
   width: 100%;
+}
+
+/* 💛 Fondo crema para las tarjetas del lado izquierdo */
+.bg-crema {
+  background-color: #fffee8 !important;
 }
 </style>
